@@ -1,3 +1,6 @@
+import csv
+from pathlib import Path  
+
 ## Part 2: Automate the Calculations.
 
 # Loan data used
@@ -112,12 +115,20 @@ print(f"The list of loans that are less than 500 are: {inexpensive_loans}")
 
 # Create CSV file for inexpensive_loans
 # Import csv and pathlib package
-import csv
-from pathlib import Path     
+
+  # Set the output header
+header = ["loan_price", "remaining_months", "repayment_interval", "future_value"]
+
+# Set the output file path
+output_path = Path("inexpensive_loans.csv") 
+
+print("Writing the data to a CSV file...")
 
 # #################################################
-csvpath = path("inexpensive_loans_list.csv")
+csvpath = path("inexpensive_loans.csv")
 with open(csvpath, 'w', newline='') as inexpensive_loans_list:
     csvwriter = csv.writer(inexpensive_loans_list.csv)
-    for loans in inexpensive_loans
+    csvwriter.writerow(header)
+    for loans in inexpensive_loans:
         cvswriter.writerow(loans.values())
+
