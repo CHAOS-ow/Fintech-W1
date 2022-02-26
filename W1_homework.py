@@ -50,7 +50,7 @@ if present_value >= loan_price:
 else:
     print ("Don't Buy. Loan is too expensive and not worth the price")
     
- ##################   Analyze the loan value with a minimum return of 20% in order to determine purchasability of the loan. (5 points)
+
 
 ## Part 4: Perform Financial Calculations
 
@@ -113,8 +113,6 @@ for row in loans:
         inexpensive_loans.append(loan_price)
 print(f"The list of loans that are less than 500 are: {inexpensive_loans}")
 
-# Create CSV file for inexpensive_loans
-# Import csv and pathlib package
 
   # Set the output header
 header = ["loan_price", "remaining_months", "repayment_interval", "future_value"]
@@ -124,7 +122,7 @@ output_path = Path("inexpensive_loans.csv")
 
 print("Writing the data to a CSV file...")
 
-# #################################################
+# Create CSV file for inexpensive_loans
 csvpath = path("inexpensive_loans.csv")
 with open(csvpath, 'w', newline='') as inexpensive_loans_list:
     csvwriter = csv.writer(inexpensive_loans_list.csv)
