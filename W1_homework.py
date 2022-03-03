@@ -123,10 +123,10 @@ output_path = Path("inexpensive_loans.csv")
 print("Writing the data to a CSV file...")
 
 # Create CSV file for inexpensive_loans
-csvpath = path("inexpensive_loans.csv")
+csvpath = Path("inexpensive_loans.csv")
 with open(csvpath, 'w', newline='') as inexpensive_loans_list:
-    csvwriter = csv.writer(inexpensive_loans_list.csv)
+    csvwriter = csv.writer(inexpensive_loans_list)
     csvwriter.writerow(header)
     for loans in inexpensive_loans:
-        cvswriter.writerow(loans.values())
-
+        values = loan.values()
+        csvwriter.writerow(values)
